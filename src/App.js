@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layouts/Main/Main'
 import Home from './components/Home/Home';
 import Orders from './components/Orders/Orders';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   const router = createBrowserRouter([
@@ -18,6 +19,10 @@ function App() {
         {
           path: '/orders',
           element: <Orders></Orders>
+        },
+        {
+          path: '*',
+          element: <NotFound></NotFound>
         }
       ]
     }
